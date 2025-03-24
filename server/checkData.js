@@ -14,17 +14,17 @@ const checkData = async () => {
       useUnifiedTopology: true,
     });
 
-    console.log("✅ Connected to MongoDB");
+    console.log(" Connected to MongoDB");
 
     const users = await User.find();
     const posts = await Post.find();
 
-    console.log("📌 Users in DB:", users);
-    console.log("📌 Posts in DB:", posts);
+    console.log(" Users in DB:", users);
+    console.log(" Posts in DB:", posts);
 
     mongoose.connection.close();
   } catch (error) {
-    console.error("❌ Error:", error);
+    console.error(" Error:", error);
     mongoose.connection.close();
   }
 };
